@@ -1,0 +1,48 @@
+.lightBox_container {
+  background-color: $black-opacity;
+  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  overflow: hidden;
+  @include flex_others();
+  flex-direction: column;
+  .light_box {
+    @include flex_others();
+    flex-direction: column;
+    position: relative;
+    padding: 20px;
+  }
+  .close_container {
+    margin: 10px 10px;
+    position: absolute;
+    top: -7%;
+    right: 25px;
+    z-index: 1002;
+  }
+  .btn {
+    top: 40%;
+    background-color: $white;
+    padding: 10px;
+    @include img_container(20px, 20px, 50%);
+    cursor: pointer;
+    transition: 1s linear;
+    position: absolute;
+    z-index: 1002;
+
+    &:hover {
+      background-color: $primary;
+      transition: 0.5s linear;
+    }
+  }
+  .next_btn {
+    position: absolute;
+    right: 0;
+  }
+  .prev_btn {
+    position: absolute;
+    left: 0;
+  }
+}
